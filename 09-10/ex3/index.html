@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>InfoDiário — Portal de Notícias</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f4f1eb;
+      color: #222;
+      min-height: 100vh;
+    }
+    .masthead {
+      background: #1a1a1a;
+      color: #f4f1eb;
+      text-align: center;
+      padding: 24px 20px 20px;
+      border-bottom: 4px solid #c0392b;
+    }
+    .masthead h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+    .masthead .tagline {
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      color: #aaa;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+    .date-bar {
+      background: #c0392b;
+      color: #fff;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 6px;
+      letter-spacing: 2px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 36px 20px; }
+    .noticia {
+      border-bottom: 1px solid #d5cfc4;
+      padding: 28px 0;
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .noticia:last-child { border-bottom: none; }
+    .lado-esq { text-align: center; }
+    .categoria {
+      display: block;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .cat-tecnologia { background: #2980b9; color: #fff; }
+    .cat-esportes { background: #27ae60; color: #fff; }
+    .cat-economia { background: #d35400; color: #fff; }
+    .data { font-family: 'Segoe UI', sans-serif; font-size: 0.72rem; color: #888; }
+    .titulo { font-size: 1.35rem; font-weight: 700; color: #111; margin-bottom: 10px; line-height: 1.35; }
+    .resumo { font-size: 0.9rem; color: #444; line-height: 1.65; margin-bottom: 10px; }
+    .autor {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.75rem;
+      color: #888;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="masthead">
+    <h1>InfoDiário</h1>
+    <p class="tagline">Informação que move o mundo</p>
+  </div>
+  <div class="date-bar">Sexta-feira, 09 de Outubro de 2026</div>
+
+  <div class="container">
+
+    <article class="noticia">
+      <div class="lado-esq">
+        <span class="categoria cat-tecnologia">Tecnologia</span>
+        <p class="data">09/10/2026</p>
+      </div>
+      <div>
+        <h2 class="titulo">IA revoluciona o desenvolvimento de software</h2>
+        <p class="resumo">Ferramentas de inteligência artificial estão transformando a forma como desenvolvedores escrevem código, aumentando a produtividade em até 40%.</p>
+        <p class="autor">Por Carlos Mendes</p>
+      </div>
+    </article>
+
+    <article class="noticia">
+      <div class="lado-esq">
+        <span class="categoria cat-tecnologia">Tecnologia</span>
+        <p class="data">08/10/2026</p>
+      </div>
+      <div>
+        <h2 class="titulo">Novo chip quântico bate recorde de velocidade</h2>
+        <p class="resumo">Pesquisadores desenvolveram um processador quântico capaz de resolver problemas em segundos que levariam anos em computadores convencionais.</p>
+        <p class="autor">Por Ana Lima</p>
+      </div>
+    </article>
+
+    <article class="noticia">
+      <div class="lado-esq">
+        <span class="categoria cat-esportes">Esportes</span>
+        <p class="data">07/10/2026</p>
+      </div>
+      <div>
+        <h2 class="titulo">Seleção avança para as semifinais</h2>
+        <p class="resumo">Com uma virada nos últimos minutos, o Brasil garantiu sua vaga nas semifinais do campeonato mundial.</p>
+        <p class="autor">Por Pedro Rocha</p>
+      </div>
+    </article>
+
+    <article class="noticia">
+      <div class="lado-esq">
+        <span class="categoria cat-economia">Economia</span>
+        <p class="data">06/10/2026</p>
+      </div>
+      <div>
+        <h2 class="titulo">Inflação recua pelo terceiro mês consecutivo</h2>
+        <p class="resumo">O IPCA registrou queda de 0,3% em setembro, sinalizando estabilização dos preços para o consumidor final.</p>
+        <p class="autor">Por Mariana Costa</p>
+      </div>
+    </article>
+
+    <article class="noticia">
+      <div class="lado-esq">
+        <span class="categoria cat-tecnologia">Tecnologia</span>
+        <p class="data">05/10/2026</p>
+      </div>
+      <div>
+        <h2 class="titulo">Startup brasileira capta R$ 50 milhões em rodada série B</h2>
+        <p class="resumo">A fintech focada em crédito rural recebeu investimento de fundos nacionais e internacionais para expandir operações.</p>
+        <p class="autor">Por Juliana Faria</p>
+      </div>
+    </article>
+
+  </div>
+</body>
+</html>

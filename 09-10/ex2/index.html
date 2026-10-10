@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TechStore — Loja de Informática</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      min-height: 100vh;
+      padding: 0 0 60px;
+    }
+    .topbar {
+      background: #16213e;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #0f3460;
+    }
+    .topbar .logo {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #e94560;
+      letter-spacing: 2px;
+    }
+    .topbar .sub { font-size: 0.8rem; color: #888; letter-spacing: 1px; }
+    .hero {
+      background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+      text-align: center;
+      padding: 50px 20px 40px;
+    }
+    .hero h2 { font-size: 1.6rem; font-weight: 300; color: #bbb; letter-spacing: 3px; text-transform: uppercase; }
+    .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .produto {
+      background: #16213e;
+      border-radius: 12px;
+      padding: 22px;
+      border: 1px solid #0f3460;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+    .produto:hover { border-color: #e94560; transform: translateY(-3px); }
+    .produto .cat-badge {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .nome { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .fabricante, .categoria { font-size: 0.82rem; color: #999; margin-bottom: 4px; }
+    .preco {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #e94560;
+      margin-top: 14px;
+    }
+    .situacao {
+      position: absolute;
+      top: 18px; right: 18px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .situacao.disponivel { background: #0d4f2e; color: #2ecc71; }
+    .situacao.baixo { background: #4f3a0d; color: #f39c12; }
+    .situacao.indisponivel { background: #4f0d0d; color: #e74c3c; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span class="logo">TECH<span style="color:#fff">STORE</span></span>
+    <span class="sub">Informática & Periféricos</span>
+  </div>
+
+  <div class="hero">
+    <h2>Produtos em Estoque</h2>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+
+      <div class="produto">
+        <p class="cat-badge">Notebooks</p>
+        <h2 class="nome">Notebook ProMax 15</h2>
+        <p class="fabricante">Fabricante: Dell</p>
+        <p class="categoria">Categoria: Notebooks</p>
+        <p class="preco">R$ 4.599,00</p>
+        <span class="situacao disponivel">Disponível</span>
+      </div>
+
+      <div class="produto">
+        <p class="cat-badge">Periféricos</p>
+        <h2 class="nome">Mouse Gamer RGB</h2>
+        <p class="fabricante">Fabricante: Logitech</p>
+        <p class="categoria">Categoria: Periféricos</p>
+        <p class="preco">R$ 299,00</p>
+        <span class="situacao disponivel">Disponível</span>
+      </div>
+
+      <div class="produto">
+        <p class="cat-badge">Periféricos</p>
+        <h2 class="nome">Teclado Mecânico TKL</h2>
+        <p class="fabricante">Fabricante: Redragon</p>
+        <p class="categoria">Categoria: Periféricos</p>
+        <p class="preco">R$ 450,00</p>
+        <span class="situacao baixo">Estoque baixo</span>
+      </div>
+
+      <div class="produto">
+        <p class="cat-badge">Monitores</p>
+        <h2 class="nome">Monitor 27" 4K</h2>
+        <p class="fabricante">Fabricante: LG</p>
+        <p class="categoria">Categoria: Monitores</p>
+        <p class="preco">R$ 2.199,00</p>
+        <span class="situacao indisponivel">Indisponível</span>
+      </div>
+
+      <div class="produto">
+        <p class="cat-badge">Armazenamento</p>
+        <h2 class="nome">SSD NVMe 1TB</h2>
+        <p class="fabricante">Fabricante: Kingston</p>
+        <p class="categoria">Categoria: Armazenamento</p>
+        <p class="preco">R$ 389,00</p>
+        <span class="situacao disponivel">Disponível</span>
+      </div>
+
+      <div class="produto">
+        <p class="cat-badge">Periféricos</p>
+        <h2 class="nome">Headset Gamer 7.1</h2>
+        <p class="fabricante">Fabricante: HyperX</p>
+        <p class="categoria">Categoria: Periféricos</p>
+        <p class="preco">R$ 549,00</p>
+        <span class="situacao baixo">Estoque baixo</span>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

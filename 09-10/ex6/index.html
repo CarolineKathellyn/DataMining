@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda de Eventos Tech 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 48px 30px 40px;
+      text-align: center;
+    }
+    header .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 10px;
+    }
+    header h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 6px; }
+    header .sub { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+    .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    .timeline { position: relative; padding-left: 44px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: #cbd5e0;
+    }
+    .evento {
+      position: relative;
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border: 1px solid #e2e8f0;
+      transition: box-shadow 0.2s;
+    }
+    .evento:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+    .evento::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 24px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #667eea;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #667eea;
+    }
+    .evento-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+    .nome { font-size: 1.15rem; font-weight: 700; color: #1a202c; }
+    .data-badge {
+      flex-shrink: 0;
+      background: #667eea;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #718096; }
+    .meta-item .icon { font-size: 0.9rem; }
+    .palestrantes-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .palestrante {
+      background: #f7f0ff;
+      color: #6b46c1;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #d6bcfa;
+    }
+    .footer-row { display: flex; justify-content: flex-end; }
+    .inscricao {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: opacity 0.2s;
+    }
+    .inscricao:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Temporada</p>
+    <h1>Agenda de Eventos Tech 2026</h1>
+    <p class="sub">Conferências · Meetups · Hackathons</p>
+  </header>
+
+  <div class="container">
+    <div class="timeline">
+
+      <div class="evento">
+        <div class="evento-header">
+          <h2 class="nome">DevConf Brasil</h2>
+          <span class="data-badge">15/11/2026</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-item"><span class="icon">🕘</span> <span class="horario">Horário: 09:00</span></span>
+          <span class="meta-item"><span class="icon">📍</span> <span class="local">Local: Centro de Convenções SP</span></span>
+        </div>
+        <div class="palestrantes-row">
+          <span class="palestrante">Carlos Mendes</span>
+        </div>
+        <div class="footer-row">
+          <a class="inscricao" href="http://127.0.0.1:8000/inscricao/devconf">Inscreva-se</a>
+        </div>
+        <p class="data" style="display:none">Data: 15/11/2026</p>
+      </div>
+
+      <div class="evento">
+        <div class="evento-header">
+          <h2 class="nome">Python Day</h2>
+          <span class="data-badge">22/11/2026</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-item"><span class="icon">🕙</span> <span class="horario">Horário: 10:00</span></span>
+          <span class="meta-item"><span class="icon">📍</span> <span class="local">Local: Auditório FIAP</span></span>
+        </div>
+        <div class="palestrantes-row">
+          <span class="palestrante">Ana Lima</span>
+          <span class="palestrante">Bruno Ferreira</span>
+        </div>
+        <div class="footer-row">
+          <a class="inscricao" href="http://127.0.0.1:8000/inscricao/pythonday">Garanta sua vaga</a>
+        </div>
+        <p class="data" style="display:none">Data: 22/11/2026</p>
+      </div>
+
+      <div class="evento">
+        <div class="evento-header">
+          <h2 class="nome">Meetup de IA</h2>
+          <span class="data-badge">01/12/2026</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-item"><span class="icon">🕖</span> <span class="horario">Horário: 19:00</span></span>
+          <span class="meta-item"><span class="icon">📍</span> <span class="local">Local: Google For Startups - RJ</span></span>
+        </div>
+        <div class="palestrantes-row">
+          <span class="palestrante">Mariana Costa</span>
+        </div>
+        <div class="footer-row">
+          <a class="inscricao" href="http://127.0.0.1:8000/inscricao/meetup-ia">Participar</a>
+        </div>
+        <p class="data" style="display:none">Data: 01/12/2026</p>
+      </div>
+
+      <div class="evento">
+        <div class="evento-header">
+          <h2 class="nome">Hackathon Inova</h2>
+          <span class="data-badge">10/12/2026</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-item"><span class="icon">🕗</span> <span class="horario">Horário: 08:00</span></span>
+          <span class="meta-item"><span class="icon">📍</span> <span class="local">Local: Hub de Inovação BH</span></span>
+        </div>
+        <div class="palestrantes-row">
+          <span class="palestrante">Pedro Rocha</span>
+          <span class="palestrante">Juliana Faria</span>
+        </div>
+        <div class="footer-row">
+          <a class="inscricao" href="http://127.0.0.1:8000/inscricao/hackathon">Quero participar</a>
+        </div>
+        <p class="data" style="display:none">Data: 10/12/2026</p>
+      </div>
+
+      <div class="evento">
+        <div class="evento-header">
+          <h2 class="nome">Web Summit Recife</h2>
+          <span class="data-badge">20/12/2026</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-item"><span class="icon">🕑</span> <span class="horario">Horário: 14:00</span></span>
+          <span class="meta-item"><span class="icon">📍</span> <span class="local">Local: Porto Digital - Recife</span></span>
+        </div>
+        <div class="palestrantes-row">
+          <span class="palestrante">Fernanda Souza</span>
+        </div>
+        <div class="footer-row">
+          <a class="inscricao" href="http://127.0.0.1:8000/inscricao/websummit">Cadastrar</a>
+        </div>
+        <p class="data" style="display:none">Data: 20/12/2026</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

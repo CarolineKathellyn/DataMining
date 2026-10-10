@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca Municipal</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f4ee;
+      color: #3a2e20;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+    header {
+      background: #3a2e20;
+      color: #f8f4ee;
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    header .icon { font-size: 2.5rem; }
+    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 1px; }
+    header p { font-size: 0.8rem; color: #c9b99a; margin-top: 4px; letter-spacing: 2px; }
+    .shelf-bar {
+      background: #c9b99a;
+      height: 8px;
+    }
+    .container { max-width: 860px; margin: 40px auto; padding: 0 20px; }
+    .livro {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: 6px 1fr;
+      box-shadow: 0 2px 12px rgba(58,46,32,0.1);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .livro:hover { box-shadow: 0 6px 24px rgba(58,46,32,0.18); }
+    .livro:nth-child(1) .spine { background: #e74c3c; }
+    .livro:nth-child(2) .spine { background: #2c3e50; }
+    .livro:nth-child(3) .spine { background: #27ae60; }
+    .livro:nth-child(4) .spine { background: #8e44ad; }
+    .livro:nth-child(5) .spine { background: #e67e22; }
+    .spine { width: 6px; }
+    .livro-body { padding: 20px 24px; }
+    .livro-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+    .titulo { font-size: 1.15rem; font-weight: 700; color: #3a2e20; }
+    .situacao {
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .disponivel { background: #d5f5e3; color: #1e8449; }
+    .emprestado { background: #fdebd0; color: #b9770e; }
+    .meta { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
+    .meta span { font-size: 0.8rem; color: #888; }
+    .meta strong { color: #555; }
+    .autor { font-size: 0.85rem; color: #666; margin-bottom: 14px; font-style: italic; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .palavras-chave { display: contents; }
+    .palavras-chave li {
+      list-style: none;
+      background: #f0e8dc;
+      color: #7a5c3a;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="icon">📚</span>
+    <div>
+      <h1>Biblioteca Municipal</h1>
+      <p>Acervo Digital — 2026</p>
+    </div>
+  </header>
+  <div class="shelf-bar"></div>
+
+  <div class="container">
+
+    <div class="livro">
+      <div class="spine"></div>
+      <div class="livro-body">
+        <div class="livro-header">
+          <h2 class="titulo">O Senhor dos Anéis</h2>
+          <span class="situacao disponivel">Disponível</span>
+        </div>
+        <p class="autor">Autor: J.R.R. Tolkien</p>
+        <div class="meta">
+          <span class="ano">Ano: <strong>1954</strong></span>
+          <span class="genero">Gênero: <strong>Fantasia</strong></span>
+        </div>
+        <div class="tags">
+          <ul class="palavras-chave">
+            <li>fantasia épica</li>
+            <li>magia</li>
+            <li>aventura</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="livro">
+      <div class="spine"></div>
+      <div class="livro-body">
+        <div class="livro-header">
+          <h2 class="titulo">1984</h2>
+          <span class="situacao emprestado">Emprestado</span>
+        </div>
+        <p class="autor">Autor: George Orwell</p>
+        <div class="meta">
+          <span class="ano">Ano: <strong>1949</strong></span>
+          <span class="genero">Gênero: <strong>Distopia</strong></span>
+        </div>
+        <div class="tags">
+          <ul class="palavras-chave">
+            <li>totalitarismo</li>
+            <li>vigilância</li>
+            <li>política</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="livro">
+      <div class="spine"></div>
+      <div class="livro-body">
+        <div class="livro-header">
+          <h2 class="titulo">Sapiens</h2>
+          <span class="situacao disponivel">Disponível</span>
+        </div>
+        <p class="autor">Autor: Yuval Noah Harari</p>
+        <div class="meta">
+          <span class="ano">Ano: <strong>2011</strong></span>
+          <span class="genero">Gênero: <strong>História</strong></span>
+        </div>
+        <div class="tags">
+          <ul class="palavras-chave">
+            <li>humanidade</li>
+            <li>evolução</li>
+            <li>civilização</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="livro">
+      <div class="spine"></div>
+      <div class="livro-body">
+        <div class="livro-header">
+          <h2 class="titulo">Dom Casmurro</h2>
+          <span class="situacao emprestado">Emprestado</span>
+        </div>
+        <p class="autor">Autor: Machado de Assis</p>
+        <div class="meta">
+          <span class="ano">Ano: <strong>1899</strong></span>
+          <span class="genero">Gênero: <strong>Romance</strong></span>
+        </div>
+        <div class="tags">
+          <ul class="palavras-chave">
+            <li>ciúme</li>
+            <li>amor</li>
+            <li>memória</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="livro">
+      <div class="spine"></div>
+      <div class="livro-body">
+        <div class="livro-header">
+          <h2 class="titulo">Clean Code</h2>
+          <span class="situacao disponivel">Disponível</span>
+        </div>
+        <p class="autor">Autor: Robert C. Martin</p>
+        <div class="meta">
+          <span class="ano">Ano: <strong>2008</strong></span>
+          <span class="genero">Gênero: <strong>Tecnologia</strong></span>
+        </div>
+        <div class="tags">
+          <ul class="palavras-chave">
+            <li>programação</li>
+            <li>boas práticas</li>
+            <li>refatoração</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

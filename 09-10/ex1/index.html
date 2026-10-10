@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TechLearn — Catálogo de Cursos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0c29;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #eee;
+    }
+    header { text-align: center; margin-bottom: 50px; }
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #f7971e, #ffd200);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p { color: #aaa; margin-top: 8px; font-size: 0.95rem; letter-spacing: 2px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .curso {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .curso::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .curso:nth-child(1)::before { background: linear-gradient(90deg, #f7971e, #ffd200); }
+    .curso:nth-child(2)::before { background: linear-gradient(90deg, #11998e, #38ef7d); }
+    .curso:nth-child(3)::before { background: linear-gradient(90deg, #ee0979, #ff6a00); }
+    .curso:nth-child(4)::before { background: linear-gradient(90deg, #4776e6, #8e54e9); }
+    .curso:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .area-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.1);
+      color: #ddd;
+    }
+    .nome { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .area, .carga { font-size: 0.83rem; color: #aaa; margin-bottom: 5px; }
+    .area strong, .carga strong { color: #eee; }
+    hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 16px 0; }
+    .assuntos { list-style: none; }
+    .assuntos li {
+      padding: 7px 0;
+      font-size: 0.87rem;
+      color: #ccc;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .assuntos li:last-child { border-bottom: none; }
+    .assuntos li::before { content: "›"; color: #ffd200; font-weight: bold; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TechLearn</h1>
+    <p>Catálogo de Cursos 2026</p>
+  </header>
+
+  <div class="grid">
+    <div class="curso">
+      <span class="area-tag">Tecnologia</span>
+      <h2 class="nome">Desenvolvimento Web</h2>
+      <p class="area">Área: <strong>Tecnologia</strong></p>
+      <p class="carga">Carga Horária: <strong>120h</strong></p>
+      <hr>
+      <ul class="assuntos">
+        <li>HTML e CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+      </ul>
+    </div>
+
+    <div class="curso">
+      <span class="area-tag">Tecnologia</span>
+      <h2 class="nome">Ciência de Dados</h2>
+      <p class="area">Área: <strong>Tecnologia</strong></p>
+      <p class="carga">Carga Horária: <strong>160h</strong></p>
+      <hr>
+      <ul class="assuntos">
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>Machine Learning</li>
+      </ul>
+    </div>
+
+    <div class="curso">
+      <span class="area-tag">Design</span>
+      <h2 class="nome">Design Gráfico</h2>
+      <p class="area">Área: <strong>Design</strong></p>
+      <p class="carga">Carga Horária: <strong>80h</strong></p>
+      <hr>
+      <ul class="assuntos">
+        <li>Photoshop</li>
+        <li>Illustrator</li>
+        <li>Tipografia</li>
+      </ul>
+    </div>
+
+    <div class="curso">
+      <span class="area-tag">Administração</span>
+      <h2 class="nome">Gestão de Projetos</h2>
+      <p class="area">Área: <strong>Administração</strong></p>
+      <p class="carga">Carga Horária: <strong>60h</strong></p>
+      <hr>
+      <ul class="assuntos">
+        <li>Scrum</li>
+        <li>Kanban</li>
+        <li>PMBOK</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
