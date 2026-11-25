@@ -1,0 +1,47 @@
+[system]
+Você é um analista de dados que interpreta resultados de Mineração de Dados. Interprete somente as informações fornecidas. Não invente valores, vinhos ou atributos que não estejam no resumo. Quando sugerir uma explicação que não pode ser comprovada pelos números, deixe claro que é uma hipótese.
+
+[user]
+Você receberá resultados produzidos por uma análise de Mineração de Dados feita em Python sobre vinhos tintos.
+Cada vinho é descrito por medidas físico-químicas padronizadas; a semelhança foi medida pela distância Euclidiana.
+
+Responda em português, em Markdown, com estas seções:
+1. Principais padrões: o que distingue as faixas de qualidade.
+2. Vinhos mais semelhantes: o que a proximidade indica e se ela tem relação com a nota.
+3. Vinhos atípicos: por que se afastam do perfil geral e possíveis explicações (marque como hipótese).
+4. Conclusão curta (até 5 linhas) respondendo: quais vinhos são mais parecidos entre si e quais se afastam mais do perfil geral?
+5. Duas perguntas adicionais que valeria investigar.
+
+Resumo dos resultados:
+Dataset: Red Wine Quality (vinhos tintos, medidas físico-químicas de laboratório e nota de qualidade de 0 a 10).
+Registros: 1599 no arquivo; 240 duplicatas exatas removidas; 1359 vinhos analisados. Sem valores ausentes.
+
+Preparação:
+- Atributos usados na distância (11, padronizados por z-score): acidez_fixa, acidez_volatil, acido_citrico, acucar_residual, cloretos, so2_total, proporcao_so2_livre, densidade, ph, sulfatos, alcool.
+- proporcao_so2_livre = so2_livre / so2_total (atributo criado). A nota de qualidade NÃO entrou na distância.
+- Vinhos com pelo menos um atributo outlier: 340 pelo IQR (1,5·IQR) e 120 pelo Z-score (|z| > 3).
+- Atributos com mais outliers pelo IQR: acucar_residual (126), cloretos (87), sulfatos (55).
+
+Similaridade (distância Euclidiana entre todos os 922761 pares):
+- Distância média entre dois vinhos: 4.36; menor: 0.015; maior: 18.11.
+- Pares mais semelhantes:
+- Vinho 1514 e vinho 1515: distância 0.015 (notas 6 e 6)
+- Vinho 1439 e vinho 1444: distância 0.031 (notas 6 e 6)
+- Vinho 1475 e vinho 1477: distância 0.031 (notas 7 e 7)
+- Vinho 1441 e vinho 1445: distância 0.031 (notas 6 e 6)
+- Vinho 1191 e vinho 1193: distância 0.058 (notas 5 e 5)
+- Entre os 100 pares mais próximos, 72.0% têm a mesma nota; entre todos os pares, 35.2%.
+
+Vinhos mais atípicos (distância ao centro da base; mediana da base = 2.80):
+- Vinho 151: distância ao centro 14.34, nota 4; motivo: cloretos = 0.61 (mediana 0.079, z = +10.6); sulfatos = 2 (mediana 0.62, z = +7.9)
+- Vinho 258: distância ao centro 11.70, nota 5; motivo: cloretos = 0.611 (mediana 0.079, z = +10.6); sulfatos = 1.26 (mediana 0.62, z = +3.5)
+- Vinho 1434: distância ao centro 10.92, nota 6; motivo: acucar_residual = 15.4 (mediana 2.2, z = +9.5); densidade = 1.004 (mediana 0.9967, z = +3.7)
+- Vinho 480: distância ao centro 10.49, nota 5; motivo: acucar_residual = 15.5 (mediana 2.2, z = +9.6); densidade = 1.003 (mediana 0.9967, z = +3.2)
+- Vinho 1474: distância ao centro 9.65, nota 5; motivo: acucar_residual = 13.8 (mediana 2.2, z = +8.3); densidade = 1.002 (mediana 0.9967, z = +3.1)
+- Os 5% mais distantes do centro (68 vinhos) estão acima de 5.39.
+- Atributo que mais afasta cada um desses vinhos: cloretos (21), acucar_residual (13), sulfatos (7), alcool (6).
+
+Médias por faixa de qualidade:
+- baixa (3-4): 63 vinhos; médias: alcool 10.2, acidez_volatil 0.724, sulfatos 0.592, acido_citrico 0.174, densidade 0.997, so2_total 34.4; distância média ao centro 3.53; 6.3% entre os 5% mais atípicos
+- média (5-6): 1112 vinhos; médias: alcool 10.3, acidez_volatil 0.539, sulfatos 0.648, acido_citrico 0.261, densidade 0.997, so2_total 49.4; distância média ao centro 2.98; 4.9% entre os 5% mais atípicos
+- alta (7-8): 184 vinhos; médias: alcool 11.6, acidez_volatil 0.406, sulfatos 0.746, acido_citrico 0.373, densidade 0.996, so2_total 35.4; distância média ao centro 3.35; 5.4% entre os 5% mais atípicos

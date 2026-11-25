@@ -1,0 +1,11 @@
+id_vinho,distancia_ao_centro,nota,outliers_z,outliers_iqr,motivo
+151,14.34204889899715,4,4,4,"cloretos = 0.61 (mediana 0.079, z = +10.6); sulfatos = 2 (mediana 0.62, z = +7.9)"
+258,11.702835196918272,5,2,2,"cloretos = 0.611 (mediana 0.079, z = +10.6); sulfatos = 1.26 (mediana 0.62, z = +3.5)"
+1434,10.9193571271081,6,3,4,"acucar_residual = 15.4 (mediana 2.2, z = +9.5); densidade = 1.004 (mediana 0.9967, z = +3.7)"
+480,10.49370603186333,5,2,2,"acucar_residual = 15.5 (mediana 2.2, z = +9.6); densidade = 1.003 (mediana 0.9967, z = +3.2)"
+1474,9.649208627719196,5,3,4,"acucar_residual = 13.8 (mediana 2.2, z = +8.3); densidade = 1.002 (mediana 0.9967, z = +3.1)"
+1081,9.548113595462109,7,2,2,"so2_total = 289 (mediana 38, z = +7.3); acucar_residual = 8.3 (mediana 2.2, z = +4.3)"
+1079,9.294668016028494,7,2,2,"so2_total = 278 (mediana 38, z = +6.9); acucar_residual = 8.3 (mediana 2.2, z = +4.3)"
+1574,9.244095419912288,6,1,1,"acucar_residual = 13.9 (mediana 2.2, z = +8.4); acido_citrico = 0.78 (mediana 0.26, z = +2.6)"
+106,9.119937443833233,5,2,2,"cloretos = 0.467 (mediana 0.079, z = +7.7); sulfatos = 1.31 (mediana 0.62, z = +3.8)"
+1244,8.991226959941018,6,3,3,"acucar_residual = 13.4 (mediana 2.2, z = +8.0); so2_total = 160 (mediana 38, z = +3.4)"
